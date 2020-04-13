@@ -1,0 +1,3 @@
+class PhilosopherListsController < ApplicationController 
+   
+end
