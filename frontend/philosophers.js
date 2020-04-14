@@ -20,11 +20,19 @@ fetch('http://localhost:3000/philosophers')
         
         philosopherCard.className = 'philosopher-card'
         philosopherCard.innerHTML = `
-        <img class='responsive' src='${philosopher.image}' alt='${philosopher.name}'>
-        <section class='philosopher-info'>
-            <p class='philosopher-name-title'>${philosopher.name}</p>
-            <p class='philosopher-summary'>${philosopher.summary}</p>
-        </section>`
+        <div class="container">
+        <div class="card-container"> 
+        <div class="card">
+        <figure class="front">
+        <img src='${philosopher.image}' alt='${philosopher.name}'>
+        </figure> 
+        <figure class="back">
+            <h1 class='philosopher-name-title'>${philosopher.name}</h1>
+            <h2 class='philosopher-summary'>${philosopher.summary}</h2>
+        </figure>
+        </div> 
+        </div>
+        </div>`
     
         const philosopherInfo = philosopherCard.querySelector('.philosopher-info')
         
