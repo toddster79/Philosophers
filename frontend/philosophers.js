@@ -21,7 +21,7 @@ fetch('http://localhost:3000/philosophers')
         philosopherCard.className = 'philosopher-card'
         philosopherCard.innerHTML = `
         <div class="container">
-        <div class="card-container"> 
+        <div class="card-container">    
         <div class="card">
         <figure class="front">
         <img src='${philosopher.image}' alt='${philosopher.name}'>
@@ -30,7 +30,7 @@ fetch('http://localhost:3000/philosophers')
             <h1 class='philosopher-name-title'>${philosopher.name}</h1>
             <h2 class='philosopher-summary'>${philosopher.summary}</h2>
             <button class="add-button">Add</button>
-        </figure>
+        </figure>  
         </div> 
         </div>
         </div>`

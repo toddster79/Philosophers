@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examined Life</title> 
+    <link rel="stylesheet" href="index.css">
+</head>
+<body id='login-page'> 
+    <div class="logo-bar"> 
+        <img class="logo-image" src="https://lh3.googleusercontent.com/Ddj-uSpOQ0vKaQ8lRVizkOnUQ0lSivRCrLSZCTQBd-7J6Ud23QEdrQhZ_JtUrRDXhmb_aJhqzYNNxhx5yBgFgYLc9HVjC1ctmhCvnga6w5xmdTaxmMtT6xVGh0oEU7PVG5vsKWTG5A=w2400" alt=""> 
+    </div> 
+        <div class="container"> 
+            <div class="card-container">    
+                <div class="card"> 
+                    <figure class="front">
+                        <img class="login-front" src="https://lh3.googleusercontent.com/lBMGoNbhL-f15USLZV52ifF6u1Uh6wpatVn8FE1mpRaBZEtdoivuzx-gtzsNBWS1_tEYHO5Nf1onnk3CvsBgjHfpuvzumNrPXzg9lxNpH0Zpa3Tq9sT5swVuSXN1iTH4C5kfkCK0xQ=w2400" alt="">
+                    </figure> 
+                    <figure class="back">
+                        <form method="POST" action="http://localhost:3000/users">
+                            <h2>New Account</h2>
+                            <input class="text-field new-name" type="text" name="user_name" placeholder="Username">
+                            <input class="text-field new-password" type="password" name="password" placeholder="Password">
+                            <input class="form-button new-button" type="submit" value="New">
+                        </form>
+                        <form id="login" method="GET" action="http://localhost:3000/login/">
+                            <h2>Login</h2>
+                            <input class="text-field old-name" type="text" name="name" placeholder="Username">
+                            <input class="text-field old-password" type="password" name="password" placeholder="Password">
+                            <input class="form-button old-button" type="submit" value="Login">
+                        </form> 
+                    </figure>
+                </div>
+            </div>
+        </div>
+    <script src="index.js"></script>
+</body>
+</html>

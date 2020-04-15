@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_04_13_174050) do
 
   create_table "philosopher_lists", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "philosopher_id"
+    t.integer "user_id", null: false
+    t.integer "philosopher_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["philosopher_id"], name: "index_philosopher_lists_on_philosopher_id"
@@ -36,4 +36,6 @@ ActiveRecord::Schema.define(version: 2020_04_13_174050) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "philosopher_lists", "philosophers"
+  add_foreign_key "philosopher_lists", "users"
 end
