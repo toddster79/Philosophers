@@ -1,5 +1,6 @@
 const searchParams = new URLSearchParams(window.location.search)
 const userID = searchParams.get('user_id')  
+//console.log(userID)
 
 fetch('http://localhost:3000/philosophers')
     .then(response => response.json())
@@ -20,6 +21,7 @@ fetch('http://localhost:3000/philosophers')
         
         philosopherCard.className = 'philosopher-card'
         philosopherCard.innerHTML = `
+        <section class="philosopher-info"></section>
         <div class="container">
         <div class="card-container">    
         <div class="card">
@@ -33,9 +35,18 @@ fetch('http://localhost:3000/philosophers')
         </figure>  
         </div> 
         </div>
-        </div>`
+        </div>
+        </section>`
     
-        const philosopherInfo = philosopherCard.querySelector('.philosopher-info')
+        const philosopherInfo = philosopherCard.querySelector('.philosopher-info') 
+        
+        //addPhilosopher(philosopher, philosopherInfo)
         
         philosophersList.append(philosopherCard)
-    }
+    }  
+
+    // function addPhilosopher(philosopher, philosopherInfo) {    
+    //         philosopherInfo.innerHTML += `<form action='http://localhost:3000/user_list?user_id=${userID}&philosopher_id=${philosopher.id}' method='POST'>
+    //             <input type="submit" value="Add"></form>`
+    // }
+    

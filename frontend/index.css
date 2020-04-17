@@ -159,9 +159,12 @@ input {
 } 
 
 .new-button {
-    background: #b4e4ec;
+    background: #b4e4ec; 
+    cursor: pointer; 
+
 } 
 
 .old-button {
-    background: #b4e4ec;
+    background: #b4e4ec; 
+    cursor: pointer; 
 }
